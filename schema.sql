@@ -1,5 +1,8 @@
 create schema if not exists geo;
 
+CREATE EXTENSION cube;
+CREATE EXTENSION earthdistance;
+
 create table if not exists geo.geoname (
     geonameid int primary key,
     name varchar(200),
@@ -23,6 +26,8 @@ create table if not exists geo.geoname (
 );
 
 create index if not exists geoname_name_lower_idx on geo.geoname(lower(name) text_pattern_ops);
+
+create index if not exists geoname_country_ids on geo.geoname(country);
 
 
 create table if not exists geo.alternatename (
