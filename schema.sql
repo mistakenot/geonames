@@ -1,11 +1,10 @@
-create schema geo;
-use schema geo;
+create schema if not exists geo;
 
-create table geoname (
+create table if not exists geo.geoname (
     geonameid int primary key,
     name varchar(200),
     asciiname varchar(200),
-    alternatives text,
+    alternatenames varchar(10000),
     latitude float,
     longitude float,
     fclass char(1),
@@ -23,17 +22,12 @@ create table geoname (
     moddate date
 );
 
-create index on geoname(lower(name) text_pattern_ops)
+create index if not exists geoname_name_lower_idx on geo.geoname(lower(name) text_pattern_ops);
 
-create function search_geoname_by_name_prefix(prefix text) returns table(id int, name text, country text) as $$
-begin
-    
-end
-$$; language plpgsql;
 
-create table alternatename (
+create table if not exists geo.alternatename (
     alternatenameId int primary key,
-    geonameid int references geoname(geonameId),
+    geonameid int references geo.geoname(geonameId),
     isoLanguage varchar(7),
     alternateName varchar(200),
     isPreferredName boolean,
@@ -42,7 +36,10 @@ create table alternatename (
     isHistoric boolean
 );
 
-create table "countryinfo" (
+create index if not exists alternateName_alternateName_lower_idx on geo.alternateName(lower(alternateName) text_pattern_ops);
+
+
+create table if not exists geo.countryinfo (
     iso_alpha2 char(2) unique,
     iso_alpha3 char(3) unique,
     iso_numeric integer unique,
@@ -59,17 +56,25 @@ create table "countryinfo" (
     postalcode varchar(100),
     postalcoderegex varchar(200),
     languages varchar(200),
-    geonameId int primary key references geoname(geonameid),
+    geonameId int primary key references geo.geoname(geonameid),
     neighbors varchar(50),
     equivfipscode varchar(3)
 );
 
-create table heirarchy (
+create table if not exists geo.heirarchy (
     parentId int,
     childId int,
     type varchar(100)
-)
+);
+
 -- This is used instead of a unique / foreign key as some 
 --  ids are missing.
-create index on heirarchy(parentId)
-create index on heirarchy(childId)
+create index if not exists heirarchy_parent_idx on geo.heirarchy(parentId);
+create index if not exists heirarchy_child_idx on geo.heirarchy(childId);
+
+create table if not exists geo.admincodes(
+    code varchar(100) unique,
+    name varchar(200),
+    nameAscii varchar(200),
+    geonameid int references geo.geoname(geonameid)
+);
