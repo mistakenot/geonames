@@ -12,12 +12,6 @@ export PGHOST="${PGHOST:=localhost}"
 export PGUSER="${PGUSER:=postgres}"
 
 download_file() {
-    # if [ ! -f "data/$1.*" ]; then
-    #     (wget --directory-prefix=data http://download.geonames.org/export/dump/$1.zip && \
-    #     unzip -q data/$1.zip -d./data/) ||
-    #     wget --directory-prefix=data http://download.geonames.org/export/dump/$1.txt
-    # fi
-
     if ! ls -q data/$1.* >/dev/null; then
         (wget --directory-prefix=data http://download.geonames.org/export/dump/$1.zip && \
         unzip -o data/$1.zip -d./data/) ||
@@ -60,6 +54,14 @@ import_all_data() {
     cat data/admin2Codes.txt | psql -c "copy geo.admincodes (code, name, nameascii, geonameid) from stdin null as '';"
 }
 
+export_all_data() {
+    psql -c "copy geo.geoname to stdout with null as ''" > data/geoname.tsv
+    psql -c "copy geo.heirarchy to stdout with null as ''" > data/heirarchy.tsv
+    psql -c "copy geo.alternatename to stdout with null as ''" > data/alternatename.tsv
+    psql -c "copy geo.countryinfo to stdout with null as ''" > data/countryinfo.tsv
+    psql -c "copy geo.admincodes to stdout with null as ''" > data/admincodes.tsv
+}
+
 import_uk_data() {
     echo 'Importing GB.txt. Might take a while.'
     cat data/GB.txt | psql -c "copy geo.geoname (geonameid,name,asciiname,alternatenames,latitude,longitude,fclass,fcode,country,cc2,admin1,admin2,admin3,admin4,population,elevation,gtopo30,timezone,moddate) from STDIN null as '';"
@@ -71,8 +73,20 @@ post_create() {
     cat ./post-create.sql | psql
 }
 
-download_all_files
-create_schema
-import_uk_data
+create_two() {
+    cat schema2.sql | psql
+    cat data/geoname.tsv | psql -c "copy geo.geoname from stdin with null as ''"
+    cat data/heirarchy.tsv | psql -c "copy geo.heirarchy from stdin with null as ''"
+    cat data/alternatename.tsv | psql -c "copy geo.alternatename from stdin with null as ''"
+    cat data/countryinfo.tsv | psql -c "copy geo.countryinfo from stdin with null as ''" 
+    cat data/admincodes.tsv | psql -c "copy geo.admincodes from stdin with null as ''"
+}
+
+# download_all_files
+# create_schema
+# import_uk_data
 # import_all_data
-post_create
+# post_create
+# export_all_data
+
+create_two

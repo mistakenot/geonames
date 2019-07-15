@@ -1,0 +1,408 @@
+Luxembourg
+Spain
+Switzerland
+France
+Italy
+Finland
+United States
+Netherlands
+United Kingdom
+Israel
+Germany
+Hungary
+Europe
+Ireland
+Egypt
+Hong Kong
+Turkey
+Portugal
+Sweden
+Norway
+Austria
+India
+South Africa
+China
+Ukraine
+Colombia
+Mexico
+Singapore
+Luxemburg
+Estonia
+Latvia
+Lithuania
+Poland
+Belgium
+Iceland
+Russia
+Australia
+Denmark
+Czech Republic
+Japan
+Brazil
+Bulgaria
+Canada
+Belarus
+United Arab Emirates
+Saudi Arabia
+Georgia
+Slovakia
+Greece
+Senegal
+Slovenia
+Liechtenstein
+South Korea
+Serbia
+Croatia
+Macedonia
+Sweden. Finland
+Hongkong
+
+Guernsey
+Jersey
+Eastern Europe
+MENA
+Global
+Central Europe
+Benelux
+Southeast Asia
+New York
+San Francisco
+South America
+EU
+North America
+Africa
+Middle East
+Asia
+Pan European
+Scandinavia
+Worldwide
+Angola
+continental Europe
+Northern Europe
+Latin America
+Caribbean
+Silicon Valley
+Baltics
+South East Asia
+Geneva
+London
+Nordics
+Berlin
+worldwide
+Western Europe
+Western United States
+Central United States
+Eastern United States
+Bavaria
+Paris
+East
+West North America
+Northern Asia
+Iberia
+Mumbai
+Geography-agnostic
+CIS
+Cambridge
+Catalonia
+Gothenburg
+SEA
+Stockholm
+North America.
+America
+APJ
+EMEAR
+Greater China
+Northern Ireland
+Central Eastern Europe
+Barcelona
+Nederland
+DACH
+International
+South Eastern Europe
+NA
+South-East Europe
+Northern
+Shanghai
+Beijing
+Tokyo
+Armenia
+Philippines
+Bangladesh
+Indonesia
+Southeast
+Baltic
+East Coast US
+San Francisco Bay Area
+West Coast
+Great Britain
+Continental Europe
+US
+Greater Europe
+Jordan
+Morocco
+Los Angeles
+Toronto
+Central America
+New Zealand
+Argentina
+West Holand
+Amsterdam
+Madrid
+Istanbul
+EMEA
+Middle-East
+SEE
+Jerusalem
+Rhône-Alpes Belgium
+Southeastern Europe
+Rome
+Vietnam
+Thailand
+Midlands
+North England
+Scotland.
+Malmö
+Emerging Markets
+Romania
+East Netherlands
+Malaysia
+Asia Europe
+Scotland
+San Diego
+Boston
+Seattle
+Tel Aviv
+Bosnia
+Herzegovina
+Greater New York Area
+East Coast
+Northeastern United States
+CEE
+Western Germany
+Asia Pacific
+Southern Europe
+Massachusetts
+California
+Balkans
+Northern Africa
+Southern America
+Western Balkan
+Albania
+Kosovo
+Montenegro
+St.Petersburg
+Moscow
+North Africa
+Southeast Europe
+Miami
+Dubai
+Capetown
+Valley
+East Europe
+Far East Asia
+Germany.
+Berkshire
+East Sussex
+West Sussex
+Hampshire
+Surrey
+UE
+Taiwan
+North East England
+East Anglia
+Gulf Cooperation Council (GCC)
+Southern England
+Andorra
+Iberian region
+"Northern powerhouse corridor" = northern england
+South East England
+Milan
+Helsinki
+Laren
+Herzliya
+Budapest
+Zurich
+Palo Alto
+Bangalore
+Dublin
+Westminster
+Cairo
+Munich
+Frankfurt
+Leipzig
+Hong kong
+SIlicon Valley
+Lisbon
+Oslo
+München
+Vienna
+Cape Town
+Chicago
+Tampa
+Birmingham
+Atlanta
+Kyiv
+Bogota
+Seville
+Manhattan Beach
+St. Gallen
+Edinburgh
+Tallinn
+Riga
+Vilnius
+Ludwigshafen
+Hamburg
+Landshut
+Menlo Park
+Michigan
+Manchester
+Herzliya Pituach
+Gdansk
+Brussels
+Reykjavik
+Warsaw
+Oulu
+Connecticut
+Lille
+Lyon
+Linz
+Cologne
+Leuven
+San Jose
+Melbourne
+Belfast
+Copenhagen
+Espoo
+Borås
+Enschede
+Albuquerque
+Bad Homburg
+Prague
+Coimbra
+Sao Paolo
+Münster
+Sofia
+Kfar Malal
+Poznan
+Lublin
+Cambridge MA
+Minsk
+Naarden
+Zaventem
+Bonn
+Abu Dhabi
+Riyadh
+Utrecht
+Antwerp
+The Hague
+Stuttgart
+Ra'anana
+Ontario
+Yehuda
+Mountain View
+Potsdam
+Zug
+Gent
+Saint Helier
+Lausanne
+Krakow
+Newtownabbey
+Santa Clara
+Groningen
+Cayman Islands
+Beer Sheva
+Cork
+Karlsruhe
+Rotterdam
+Bnei Brak
+Mont Saint Guibert
+Evanston
+Oxford
+Ostfildern
+Purchase
+Glasgow
+Henley-in-Arden
+Leeds
+Newcastle
+Sheffield
+Preston
+Nottingham
+Hull
+Tees Valley
+Schaumburg
+Admiralty
+Hoofddorp
+Bratislava
+Los Altos
+Rosh Haayin
+Bengaluru
+Hellerup
+Newcastle upon Tyne
+Greenwich
+Bruxelles
+Apeldoorn
+Athens
+Washington
+Dakar
+Porto
+Ramat Gan
+Houston
+Alexandria
+Zürich
+Sunnyvale
+Ljubljana
+Schaan
+Aachen
+Seoul
+Genève
+Hanover
+Salt Lake
+New Delhi
+Saint Louis
+Maia
+Shenzhen
+Taipei
+Princeton
+Belgrade
+Zagreb
+Skopje
+Poznań
+St. Petersburg
+Düsseldorf
+Drottning Kristinasväg
+Waterford
+Kiev
+Haifa
+Boulder
+Mülheim an der Ruhr
+Bologna
+Catania
+Fort Worth
+Lugano
+Sheung Wan
+Ghent
+Trondheim
+Herzilya Pituach
+Herzeliya
+Foster City
+Vaasa
+Wuppertal
+Zeist
+San Sebastián
+Limhamn
+Bussum
+Solli
+St. Peter Port
+Chester
+Bristol
+Brisbane
+Newport Beach
+Gloucester
+Alvechurch
+England
+Norwich
+Stamford
+Cheltenham
+Southampton
+St. Helier
+Wakefield
