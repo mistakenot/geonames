@@ -74,7 +74,7 @@ post_create() {
 }
 
 create_two() {
-    cat schema2.sql | psql
+    # cat schema2.sql | psql
     cat data/geoname.tsv | psql -c "copy geo.geoname from stdin with null as ''"
     cat data/heirarchy.tsv | psql -c "copy geo.heirarchy from stdin with null as ''"
     cat data/alternatename.tsv | psql -c "copy geo.alternatename from stdin with null as ''"
