@@ -4,7 +4,7 @@ CREATE EXTENSION cube;
 CREATE EXTENSION earthdistance;
 
 create table if not exists geo.geoname (
-    geonameid int primary key,
+    id int primary key,
     name varchar(200),
     asciiname varchar(200),
     latitude float,
@@ -32,7 +32,7 @@ create index if not exists geoname_country_ids on geo.geoname(country);
 
 create table if not exists geo.alternatename (
     alternatenameId int primary key,
-    geonameid int references geo.geoname(geonameId),
+    geonameid int references geo.geoname(id),
     isoLanguage varchar(7),
     alternateName varchar(200),
     isPreferredName boolean,
@@ -61,14 +61,14 @@ create table if not exists geo.countryinfo (
     postalcode varchar(100),
     postalcoderegex varchar(200),
     languages varchar(200),
-    geonameId int primary key references geo.geoname(geonameid),
+    geonameId int primary key references geo.geoname(id),
     neighbors varchar(50),
     equivfipscode varchar(3)
 );
 
 create table if not exists geo.heirarchy (
-    parentId int references geo.geoname(geonameid),
-    childId int references geo.geoname(geonameid),
+    parentId int references geo.geoname(id),
+    childId int references geo.geoname(id),
     type varchar(100)
 );
 
@@ -81,7 +81,7 @@ create table if not exists geo.admincodes(
     code varchar(100) unique,
     name varchar(200),
     nameAscii varchar(200),
-    geonameid int references geo.geoname(geonameid)
+    geonameid int references geo.geoname(id)
 );
 
 
@@ -117,7 +117,7 @@ begin
             select * from aliasResults union
             select * from geoResults),
         uniqueResults as (
-            select distinct on(geonameid) * from combinedResults
+            select distinct on(id) * from combinedResults
         )
         select r.geonameid, r.name, r.alternatename, r.country from uniqueResults r order by r.population desc limit 10);
 end

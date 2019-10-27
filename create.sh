@@ -42,7 +42,7 @@ create_schema() {
 
 import_all_data() {
     echo 'Importing allCountries.txt. Might take a while.'
-    cat data/allCountries.txt | psql -c "copy geo.geoname (geonameid,name,asciiname,alternatenames,latitude,longitude,fclass,fcode,country,cc2,admin1,admin2,admin3,admin4,population,elevation,gtopo30,timezone,moddate) from STDIN null as '';"
+    cat data/allCountries.txt | psql -c "copy geo.geoname (id,name,asciiname,alternatenames,latitude,longitude,fclass,fcode,country,cc2,admin1,admin2,admin3,admin4,population,elevation,gtopo30,timezone,moddate) from STDIN null as '';"
     echo 'Importing alternateNames.txt. Might take a while.'
     cat data/alternateNames.txt | psql -c "copy geo.alternatename (alternatenameid,geonameid,isolanguage,alternatename,ispreferredname,isshortname,iscolloquial,ishistoric) from stdin null as '';"
     echo 'Importing countryInfoNoHeader.txt'
